@@ -144,7 +144,7 @@ function drop()
 {
   cut_sound.play();
   rope.break();
-  fruit_con.dettach();
+  fruit_con.detach();
   fruit_con = null; 
 }
 
