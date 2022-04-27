@@ -1,11 +1,4 @@
-const Engine = Matter.Engine;
-const Render = Matter.Render;
-const World = Matter.World;
-const Bodies = Matter.Bodies;
-const Constraint = Matter.Constraint;
-const Body = Matter.Body;
-const Composites = Matter.Composites;
-const Composite = Matter.Composite;
+////Add the matter constant variables
 
 let engine;
 let world;
@@ -156,39 +149,4 @@ function keyPressed()
   }
 }
 
-function collide(body,sprite)
-{
-  if(body!=null)
-        {
-         var d = dist(body.position.x,body.position.y,sprite.position.x,sprite.position.y);
-          if(d<=80)
-            {
-              World.remove(engine.world,fruit);
-               fruit = null;
-               return true; 
-            }
-            else{
-              return false;
-            }
-         }
-}
-
-function airblow()
-{
-  Matter.Body.applyForce(fruit,{x:0,y:0},{x:0.01,y:0});
-  air.play();
-}
-
-
-function mute()
-{
-  if(bk_song.isPlaying())
-     {
-      bk_song.stop();
-     }
-     else{
-      bk_song.play();
-     }
-}
-
-
+/// Code for function collide, muts and air blowing 
